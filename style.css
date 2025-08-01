@@ -158,7 +158,7 @@ a{
     box-shadow: 0 5px 5px white;
     border-top: rgb(255, 255, 235) 3px solid;
     text-align: center;
-    line-height: 29px;
+    line-height: 32px;
 }
 
 p{
@@ -177,28 +177,6 @@ p{
 .details{
     color: white;
     font-size: 17px;
-}
-
-button {
-    font-size: 23px;
-    margin: auto;
-    width: 200px;
-    height: 48px;
-    color: rgb(247, 245, 245);
-    background-color: rgb(187, 158, 86);
-    border-top: solid 3px rgb(202, 172, 94);
-    border-left: solid 3px rgb(202, 172, 94);
-    border-right: solid 8px rgb(143, 121, 65);
-    border-bottom: solid 8px rgb(143, 121, 65);
-    transition: 0.2s ease-in-out;
-    animation-delay: 0.3s;
-}
-
-button:active {
-    border-right: solid 3px rgb(202, 172, 94);
-    border-bottom: solid 3px rgb(202, 172, 94);
-    border-top: solid 5px rgb(143, 121, 65);
-    border-left: solid 5px rgb(143, 121, 65);
 }
 
 @keyframes bounceArrow {
@@ -253,6 +231,28 @@ button:active {
 .toggle-area:hover {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
+}
+
+button {
+    font-size: 23px;
+    margin: auto;
+    width: 200px;
+    height: 48px;
+    color: rgb(247, 245, 245);
+    background-color: rgb(187, 158, 86);
+    border-top: solid 3px rgb(202, 172, 94);
+    border-left: solid 3px rgb(202, 172, 94);
+    border-right: solid 8px rgb(143, 121, 65);
+    border-bottom: solid 8px rgb(143, 121, 65);
+    transition: 0.2s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+button:active {
+    border-right: solid 3px rgb(202, 172, 94);
+    border-bottom: solid 3px rgb(202, 172, 94);
+    border-top: solid 5px rgb(143, 121, 65);
+    border-left: solid 5px rgb(143, 121, 65);
 }
 
 @media (min-width: 570px) {
