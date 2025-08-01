@@ -1,0 +1,289 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    background-color: #182f5a;
+    margin-top: 130px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ------- nav ------- */
+
+.nav-wrapper {
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d396b;
+    box-shadow: 0 5px 5px white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    overflow: hidden;
+    border-radius: 360px;
+    padding-right: 28px;
+    padding-left: 28px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 15px 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+.a-nav {
+    position: relative;
+    color: rgb(187, 158, 86);
+    text-decoration: none;
+    flex: 0 0 auto;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.a-nav h2 {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    -webkit-text-stroke: 0.3px rgb(202, 172, 94);
+}
+
+.a-nav.active h2 {
+    -webkit-text-stroke: 0.3px rgb(202, 172, 94);
+    color: white;
+}
+
+
+
+.a-nav:hover::after,
+.a-nav.active::after {
+    width: 100%;
+}
+
+/* الصور */
+.img-nav {
+    display: none;
+    border: none;
+}
+
+.img--nav {
+    display: none;
+    border: none;
+}
+
+.img---nav {
+    display: none;
+    border: none;
+}
+
+/* ------- nav ------- */
+
+.img-logo {
+    display: flex;
+    width: 170px;
+    margin: auto;
+}
+
+.img--logo {
+    display: flex;
+    width: 185px;
+    margin: auto;
+}
+
+.main{
+    width: 320px;
+    margin: auto
+}
+
+.corn-img {
+    display: flex;
+    width: 80px;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    font-size: 42px;
+    text-align: center;
+    color: white;
+    background-color: #254170;
+    width: 305px;
+    border-radius: 30px;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.meal{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: auto;
+}
+
+.meal-img{
+    display: flex;
+    height: 120px;
+    width: 205px;
+    border-radius: 35px 0px 35px 0px;
+    margin: auto;
+    border: #254170 14px solid;
+}
+
+.p-div{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #254170;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0 5px 5px white;
+    border-top: rgb(255, 255, 235) 3px solid;
+    text-align: center;
+    line-height: 29px;
+}
+
+p{
+    font-size: 22px;
+    padding-top: 10px;
+    margin-top: auto;
+    text-align: center;
+    color: rgb(187, 158, 86);
+    -webkit-text-stroke: 0.3px rgb(202, 172, 94);
+}
+
+.priceNum {
+    font-size: 23px;
+}
+
+.details{
+    color: white;
+    font-size: 17px;
+}
+
+button {
+    font-size: 23px;
+    margin: auto;
+    width: 200px;
+    height: 48px;
+    color: rgb(247, 245, 245);
+    background-color: rgb(187, 158, 86);
+    border-top: solid 3px rgb(202, 172, 94);
+    border-left: solid 3px rgb(202, 172, 94);
+    border-right: solid 8px rgb(143, 121, 65);
+    border-bottom: solid 8px rgb(143, 121, 65);
+    transition: 0.2s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+button:active {
+    border-right: solid 3px rgb(202, 172, 94);
+    border-bottom: solid 3px rgb(202, 172, 94);
+    border-top: solid 5px rgb(143, 121, 65);
+    border-left: solid 5px rgb(143, 121, 65);
+}
+
+@keyframes bounceArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.arrow-down {
+    width: 14px;
+    animation: bounceArrow 1.5s infinite ease-in-out;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.food-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    color: white;
+    -webkit-text-stroke: 0.3px rgb(202, 172, 94);
+    font-size: 18px;
+    padding: 0 3px;
+}
+
+.p-div.open .food-details {
+    max-height: 200px;
+    /* أو حسب المحتوى */
+}
+
+.toggle-area {
+    display: flex;
+    flex-direction: row;
+    /* جنب بعض */
+    align-items: center;
+    /* محاذاة عامودية */
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    gap: 5px;
+    /* مسافة خفيفة بينهم */
+    margin-top: -5px;
+    /* قلل المسافة من فوق */
+}
+
+.toggle-area:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+@media (min-width: 570px) {
+    .a-nav h2 {
+            font-size: 28px;
+        }
+    
+        .img-nav {
+            width: 75px;
+        }
+    
+        .img--nav {
+            width: 70px;
+        }
+    
+        .img---nav {
+            width: 78.25px;
+        }
+    
+        .img----nav {
+            width: 71.25px;
+        }
+}
+
+@media (min-width: 240px) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-wrapper::before,
+    .nav-wrapper::after {
+        opacity: 0;
+    }
+}
