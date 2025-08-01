@@ -9,29 +9,6 @@ window.onload = function () {
     });
   });
 
-  // دعم السحب للأعلى والأسفل لفتح أو إغلاق التفاصيل (جوالات)
-  document.querySelectorAll(".p-div").forEach(div => {
-    let startY = 0;
-    let endY = 0;
-
-    div.addEventListener("touchstart", (e) => {
-      startY = e.touches[0].clientY;
-    });
-
-    div.addEventListener("touchend", (e) => {
-      endY = e.changedTouches[0].clientY;
-      const distance = endY - startY;
-
-      if (distance < -30) {
-        // سحب للأعلى - افتح التفاصيل
-        div.classList.add("open");
-      } else if (distance > 30) {
-        // سحب للأسفل - سكّر التفاصيل
-        div.classList.remove("open");
-      }
-    });
-  });
-
   // تفعيل العنصر في التنقل بناءً على موقع القسم الفعلي (مش الـ h1 فقط)
   window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll(".section");
